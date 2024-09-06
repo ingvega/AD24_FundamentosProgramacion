@@ -38,7 +38,7 @@ public class Promedio {
         //decimal quedaría con 0.56
         double decimal = promedio - pesimistaEntero;
         if (decimal > 0) {
-            optimista = optimista + 1;
+            optimista = pesimistaEntero + 1;
         }
         
         //Contar las aprobatorias y apartir de estas obtener las reprobatorias
@@ -59,7 +59,7 @@ public class Promedio {
         }
         
         int reprobados=5-aprobados;
-        double porcentajeAprobados=aprobados/5.0*100;
+        double porcentajeAprobados=1.0*aprobados/5*100;
         System.out.printf("Promedio optimista: %.0f\n" +
                                      "Promedio pesimista: %.0f\n" +
                                      "Aprobados: %d\n" +
