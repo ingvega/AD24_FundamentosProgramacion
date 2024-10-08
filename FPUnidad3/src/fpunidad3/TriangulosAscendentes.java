@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author paveg
  */
-public class NewClass {
+public class TriangulosAscendentes {
     public static void main(String[] args) {
         Scanner lector=new Scanner(System.in);
         int n=lector.nextInt();
@@ -23,9 +23,8 @@ public class NewClass {
                 }
                 System.out.println("");
             }
-            
             //Líneas en descenso
-            for (int j = 1; j <=lineas/2; j++) {
+            for (int j = lineas/2; j >=1; j--) {
                 for(int k=j;k>=1;k--){
                     System.out.print("x");
                 }
