@@ -53,15 +53,15 @@ public class AnalizandoNoControl {
         } else if (carrera == 'D' || carrera == 'd') {
             licenciatura = "Industrial";
         } else if (carrera == 'G' || carrera == 'g') {
-            licenciatura = "Gestion";
+            licenciatura = "Gestion Empresarial";
         } else if (carrera == 'M' || carrera == 'm') {
             licenciatura = "Gastronomia";
         } else if (carrera == 'T' || carrera == 't') {
-            licenciatura = "Automitrices";
+            licenciatura = "Sistemas Automotrices";
         } else if (carrera == 'E' || carrera == 'e') {
             licenciatura = "Electronica";
         } else if (carrera == 'C' || carrera == 'c') {
-            licenciatura = "Cambio";
+            licenciatura = "Cambio de Carrera";
         }else{
             licenciatura="";
         }
@@ -70,11 +70,22 @@ public class AnalizandoNoControl {
         String generacion;
         /*S24120001
         S98120001*/
-        //int anio=noControl.charAt(1)-48 +noControl.charAt(2)-48;
+        //int anio=10*(noControl.charAt(1)-48) +noControl.charAt(2)-48;
         String anio=""+noControl.charAt(1)+noControl.charAt(2);
         System.out.println(anio);
         //int anioIngreso=anio;
         int anioIngreso=Integer.parseInt(anio);
+        if(anioIngreso==98 || anioIngreso==99){
+            anioIngreso+=1900;
+        }else{
+            anioIngreso+=2000;
+        }
+        String clave=""+noControl.charAt(5)+noControl.charAt(6)+
+                noControl.charAt(7)+noControl.charAt(8);
+        int claveEntera=Integer.parseInt(clave);
+        System.out.printf("Carrera = %s\n" +
+                                    "Generacion = %d\n" +
+                                    "Clave = %d",licenciatura,anioIngreso,claveEntera);
     }
 
 }
