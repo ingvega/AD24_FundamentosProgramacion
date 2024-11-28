@@ -62,7 +62,6 @@ public class Caracteres {
     }
     
     public String ordenar(String cadena){
-        int contador=0;
         int[] cubetas=new int[123];
         for (int i = 0; i < cadena.length(); i++) {
             cubetas[(int)cadena.charAt(i)]++;
@@ -82,7 +81,7 @@ public class Caracteres {
         for (int i = cadena.length()-1; i >=0; i--) {
             invertida+=cadena.charAt(i);
         }
-        return cadena;
+        return invertida;
     }
     
 }
