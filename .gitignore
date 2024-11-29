@@ -26,3 +26,4 @@ replay_pid*
 *.xml
 *.mf
 *.properties
+/FPUnidad5/build/
